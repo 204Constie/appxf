@@ -12,9 +12,9 @@ angular
         controller: 'MainCtrl',
         // controllerAs: 'mainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
+      .when('/contributors', {
+        templateUrl: 'views/contributors.html',
+        controller: 'ContributorsCtrl',
         // controllerAs: 'about'
       })
       .otherwise({

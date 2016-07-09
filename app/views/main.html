@@ -1,4 +1,4 @@
-<div ng-controller="MainCtrl">
+<!-- <div ng-controller="MainCtrl"> -->
   <div class="jumbotron">
     <h1>X Formation repository stats</h1>
     
@@ -13,6 +13,7 @@
         <th><a href="#/" ng-click="sortType = 'forks_count'"> Forks count <span ng-show="sortType == 'forks_count'" class="fa fa-caret-down"></span></th>
         <th><a href="#/" ng-click="sortType = 'size'"> Size <span ng-show="sortType == 'size'" class="fa fa-caret-down"></span></th>
         <th><a href="#/" ng-click="sortType = 'updated_at'"> Last update <span ng-show="sortType == 'updated_at'" class="fa fa-caret-down"></span></th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
@@ -21,9 +22,10 @@
         <td>{{repo.forks_count}}</td>
         <td>{{repo.size}}</td>
         <td>{{repo.updated_at | date}}</td>
+        <td>{{repo.description}}</td>
       </tr>
       
     </tbody>
   </table>
   </div>
-</div>
+<!-- </div> -->
