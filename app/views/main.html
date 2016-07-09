@@ -10,13 +10,13 @@
     <thead>
       <tr>
         <th>Repository name</th>
-        <th>Forks count</th>
-        <th>Size</th>
-        <th>Last Update</th>
+        <th><a href="#/" ng-click="sortType = 'forks_count'"> Forks count <span ng-show="sortType == 'forks_count'" class="fa fa-caret-down"></span></th>
+        <th><a href="#/" ng-click="sortType = 'size'"> Size <span ng-show="sortType == 'size'" class="fa fa-caret-down"></span></th>
+        <th><a href="#/" ng-click="sortType = 'updated_at'"> Last update <span ng-show="sortType == 'updated_at'" class="fa fa-caret-down"></span></th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="repo in repos">
+      <tr ng-repeat="repo in repos | orderBy:sortType:sortReverse">
         <th scope="row">{{repo.name}}</th>
         <td>{{repo.forks_count}}</td>
         <td>{{repo.size}}</td>
