@@ -1,27 +1,29 @@
-<div class="jumbotron">
-  <h1>Jumbotron main</h1>
-  
-  <!-- <p><a class="btn btn-lg btn-success" ng-href="#/">Button<span class="glyphicon glyphicon-ok"></span></a></p> -->
-</div>
-
-<div class="container" ng-controller="MainCtrl">
-  <table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="repo in repos">
-      <th scope="row">{{repo.name}}</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+<div ng-controller="MainCtrl">
+  <div class="jumbotron">
+    <h1>X Formation repository stats</h1>
     
-  </tbody>
-</table>
+    <!-- <p><a class="btn btn-lg btn-success" ng-href="#/">Button<span class="glyphicon glyphicon-ok"></span></a></p> -->
+  </div>
+
+  <div class="container">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Repository name</th>
+        <th>Forks count</th>
+        <th>Size</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="repo in repos">
+        <th scope="row">{{repo.name}}</th>
+        <td>{{repo.forks_count}}</td>
+        <td>{{repo.size}}</td>
+        <td>{{repo.updated_at | date}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
 </div>
