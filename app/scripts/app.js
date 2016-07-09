@@ -1,15 +1,7 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name anAppApp
- * @description
- * # anAppApp
- *
- * Main module of the application.
- */
 angular
-  .module('anAppApp', [
+  .module('anApp', [
     'ngResource',
     'ngRoute'
   ])
@@ -18,7 +10,7 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'mainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
