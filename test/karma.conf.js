@@ -48,12 +48,13 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'Chrome'
     ],
 
     // Which plugins to enable
     plugins: [
-      'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
+      //'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
 
@@ -68,10 +69,10 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
 
     // Uncomment the following lines if you are using grunt's server to run the tests
-    // proxies: {
-    //   '/': 'http://localhost:9000/'
-    // },
+    proxies: {
+      '/': 'http://localhost:9000/'
+    },
     // URL root prevent conflicts with the site root
-    // urlRoot: '_karma_'
+    urlRoot: '_karma_'
   });
 };

@@ -16,8 +16,8 @@ angular.module('anApp')
   
   })
   .controller('MainCtrl', function ($scope, githubService) {
-    $scope.sortType = "forks_count";
-    $scope.sortReverse = "false";
+    $scope.sortType = 'forks_count';
+    $scope.sortReverse = 'false';
 
     githubService.async().then(function(response){
     	$scope.repos = response;
