@@ -20,4 +20,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .controller('defaultCtrl', function($scope, $location){
+     $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
   });
