@@ -9,5 +9,14 @@ version 0.15.1.
 
 Assuming you have *git*, *npm* and *grunt* installed:
 * clone into your local repository
-* run with 'grunt serve' (should automatically open the browser at localhost:9000)
+* change directory to forlder *server* and run from terminal 
+```
+node index.js
+```
+to run the proxy server
+* go back to folder *anApp* and run from terminal with 
+```
+grunt serve
+```
+or visit https://204constie.github.io/appa 
 
