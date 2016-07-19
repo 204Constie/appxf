@@ -9,14 +9,13 @@ version 0.15.1.
 
 Assuming you have *git*, *npm* and *grunt* installed:
 * clone into your local repository
-* change directory to forlder *server* and run from terminal 
+* change directory to forlder *server* and run from terminal (this runs proxy server)
 ```
 node index.js
 ```
-to run the proxy server
-* go back to folder *anApp* and run from terminal with 
+* go back to folder *anApp* and run from terminal with (or visit https://204constie.github.io/appa)
 ```
 grunt serve
 ```
-or visit https://204constie.github.io/appa 
+ 
 
