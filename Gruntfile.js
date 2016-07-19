@@ -78,19 +78,27 @@ module.exports = function (grunt) {
       livereload: {
         options: {
           open: true,
-          middleware: function (connect) {
-            return [
+          middleware: function (connect, options) {
+    
+            var middlewares = [
+
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
                 connect.static('./bower_components')
               ),
+
+        
+
               connect().use(
                 '/app/styles',
                 connect.static('./app/styles')
               ),
               connect.static(appConfig.app)
             ];
+           
+            return middlewares;
+          
           }
         }
       },
